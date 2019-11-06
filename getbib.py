@@ -96,9 +96,9 @@ for i in range(len(bibcode_list)):
         outstring+=authors[j]+';'
     outstring_total = str(i)+')    '+dates_list[i]+'    '+outstring[0:-2]
     if len(authors) <= 3:
-        print(outstring_total)
+        print(outstring_total+' ('+bibcode_list[i]+')')
     else:
-        print(outstring_total+' et al.')
+        print(outstring_total+' et al.'+' ('+bibcode_list[i]+')')
     #the 0:-2 indexing is to get rid of the last trailing ; that was added, and replace it with et al.
     print('       '+titles_list[i])
     print('')
